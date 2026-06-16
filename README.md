@@ -10,6 +10,11 @@ Rather than reacting to financial events after they happen, FutureYou enables pr
 
 ---
 
+
+> ![Logo](assets/Logo.png)
+
+---
+
 ## The Problem
 
 People make life-changing financial decisions every day:
