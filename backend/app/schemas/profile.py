@@ -25,7 +25,7 @@ class FinancialProfile(BaseModel):
     # Investments
     monthly_sip: float = 0.0
 
-    risk_appetite: Literal[
+    risk_appetite:  Literal[
         "Low",
         "Moderate",
         "High"

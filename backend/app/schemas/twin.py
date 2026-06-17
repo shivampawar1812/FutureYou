@@ -12,7 +12,7 @@ class FinancialTwin(BaseModel):
 
     retirement_years_remaining: int
 
-    affordability_score: float
+    affordability_score: float 
 
     financial_health_score: float
 

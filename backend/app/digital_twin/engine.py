@@ -195,6 +195,6 @@ def generate_financial_twin(
         financial_health_score=
             financial_health_score,
         risk_profile=profile.risk_appetite,
-        general_home_purchase_readinesss=
+        general_home_purchase_readiness=
             general_home_purchase_readiness
     )
