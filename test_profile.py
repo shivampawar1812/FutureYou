@@ -5,7 +5,8 @@ profile = FinancialProfile(
     monthly_income=90000,
     monthly_expenses=55000,
     savings=800000,
-    risk_appetite="High",
+    sip=10000,
+    risk_appetite="Moderate",
     employment_type="Salaried"
 )
 
