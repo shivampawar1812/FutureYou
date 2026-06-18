@@ -133,6 +133,12 @@ def simulate_home_purchase(
             monthly_emi,
             2
         ),
+        
+        monthly_surplus_after_purchase=round(
+            monthly_surplus_after_purchase,
+            2
+        ),
+
 
         debt_to_income_after_purchase=round(
             debt_to_income_after_purchase,
