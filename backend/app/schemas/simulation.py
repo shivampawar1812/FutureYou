@@ -2,6 +2,7 @@ from pydantic import BaseModel
 
 
 class HomePurchaseResult(BaseModel):
+
     loan_amount: float
 
     monthly_emi: float
@@ -11,6 +12,8 @@ class HomePurchaseResult(BaseModel):
     emergency_fund_after_down_payment: float
 
     emergency_fund_months_after_purchase: float
+
+    monthly_surplus_after_purchase: float
 
     affordability_score_after_purchase: float
 
