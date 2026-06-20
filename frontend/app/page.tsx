@@ -1,6 +1,7 @@
 import BackgroundGlow from "@/components/BackgroundGlow";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
+import HowItWorks from "@/components/HowItWorks";
 
 export default function Home() {
   return (
@@ -10,6 +11,17 @@ export default function Home() {
       <Navbar />
 
       <Hero />
+
+      <div className="relative mx-auto max-w-10xl px-6 py-6">
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-[#00559a]/220 to-transparent" />
+      </div>
+
+      <HowItWorks />
+
+      <div className="relative mx-auto max-w-10xl px-6 py-12">
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-[#00559a]/220 to-transparent" />
+      </div>
+
     </main>
   );
 }

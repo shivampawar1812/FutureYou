@@ -7,7 +7,7 @@ export default function Hero() {
                 relative
                 z-10
                 flex
-                min-h-[20vh]
+                min-h-[10vh]
                 flex-col
                 items-center
                 justify-center
@@ -24,7 +24,7 @@ export default function Hero() {
                     inset-0
                     rounded-full
                     bg-[#00559a]/150
-                    blur-[240px]
+                    blur-[220px]
                     items-left
                     "
                 />
@@ -32,8 +32,8 @@ export default function Hero() {
                 <Image
                     src="/futureyou-logo.png"
                     alt="FutureYou"
-                    width={700}
-                    height={450}
+                    width={600}
+                    height={400}
                     className="relative z-10"
                 />
                 </div>
@@ -62,10 +62,11 @@ export default function Hero() {
             "
             >
             Predict, simulate and optimize
-            your financial
+            your financial future before making
+            life-changing decisions.
             </p>
 
-            <p
+            {/* <p
             className="
                 mt-0
                 max-w-3xl
@@ -76,7 +77,7 @@ export default function Hero() {
             >
             future before making
             life-changing decisions.
-            </p>
+            </p> */}
 
             <div className="mt-6 flex gap-4">
                 <button
