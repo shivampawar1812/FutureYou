@@ -31,7 +31,7 @@ export default function HowItWorks() {
     },
     {
       number: "03",
-      title: "Recieve Next Move",
+      title: "Get Next Move",
       description:
         "Our NextMove Agent analyzes your profile and recommends the best action.",
       details: [
@@ -58,18 +58,18 @@ export default function HowItWorks() {
   return (
     <section id="how-it-works" className="relative z-10 mx-auto max-w-8xl px-6">
       <div className="mb-2 text-center">
-        <h2 className="text-3xl font-bold tracking-tight">
+        <h2 className="text-4xl font-bold tracking-tight">
           How Future
           <span className="text-[#02B6EF]">You </span>
           Works
         </h2>
 
-        <p className="mt-2 text-0.8g text-zinc-400">
+        <p className="mt-4 text-0.8g text-zinc-400">
           Four intelligent steps to a better financial future.
         </p>
       </div>
 
-      <div className="flex mt-5 flex-wrap items-center justify-center gap-1">
+      <div className="flex mt-8 flex-wrap items-center justify-center gap-1">
         {steps.map((step, index) => (
         <div
             key={step.number}
@@ -93,7 +93,7 @@ export default function HowItWorks() {
                 }
             `}
             >
-            <div className="mb-2">
+            <div className="mb-3">
                 <span
                 className="
                     text-4xl
@@ -107,7 +107,7 @@ export default function HowItWorks() {
 
             <h3
                 className="
-                mb-2
+                mb-3
                 text-2xl
                 font-semibold
                 text-white

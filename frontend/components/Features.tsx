@@ -1,0 +1,96 @@
+"use client";
+
+import { useRouter } from "next/navigation";
+import { ArrowUpRight } from "lucide-react";
+
+export default function Features() {
+  const router = useRouter();
+
+  const features = [
+    {
+      title: "Financial Twin",
+      description:
+        "Build a digital twin of your finances.",
+      route: "/twin",
+    },
+    {
+      title: "What-If Simulator",
+      description:
+        "Test major financial decisions before making them.",
+      route: "/simulator",
+    },
+    {
+      title: "NextMove Agent",
+      description:
+        "Get proactive financial recommendations.",
+      route: "/next-move",
+    },
+    {
+      title: "AI Copilot",
+      description:
+        "Receive personalized financial guidance.",
+      route: "/copilot",
+    },
+  ];
+
+  return (
+    <section id="Features"
+        className="mx-auto max-w-7xl px-6">
+      <div className="mb-6 text-center">
+        <h2 className="text-4xl font-bold">
+          Explore Future<span className="text-[#02B6EF]">You </span>
+        </h2>
+
+        <p className="mt-4 text-zinc-400">
+          Powerful tools to help you make
+          smarter financial decisions.
+        </p>
+      </div>
+
+      <div className="grid gap-8 md:grid-cols-4">
+        {features.map((feature) => (
+          <div
+            key={feature.title}
+            onClick={() =>
+              router.push(feature.route)
+            }
+            className="
+              group
+              cursor-pointer
+              rounded-3xl
+              border
+              border-[#02B6EF]/10
+              bg-white/[0.02]
+              p-8
+              transition-all
+              duration-300
+              hover:border-[#02B6EF]/40
+              hover:bg-white/[0.04]
+              hover:-translate-y-2
+            "
+          >
+            <div className="flex items-start justify-between">
+              <h3 className="text-2xl font-semibold">
+                {feature.title}
+              </h3>
+
+              <ArrowUpRight
+                className="
+                  text-[#02B6EF]
+                  transition-transform
+                  duration-300
+                  group-hover:translate-x-1
+                  group-hover:-translate-y-1
+                "
+              />
+            </div>
+
+            <p className="mt-4 text-zinc-400">
+              {feature.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}

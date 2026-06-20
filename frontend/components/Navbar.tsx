@@ -3,24 +3,34 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <nav
+    <nav 
       className="
-        relative
+        fixed
+        w-[1500px]
+        h-[100px]
         z-20
         flex
         items-center
         justify-between
-        px-8
+        px-12
         py-6
       "
     >
+      <button onClick={() => {
+          document
+            .getElementById("FutureYou")
+            ?.scrollIntoView({
+              behavior: "smooth",
+            });
+        }}>
       <Image
         src="/futureyou-logo.png"
         alt="FutureYou"
-        width={150}
-        height={100}
+        width={170}
+        height={120}
         priority
       />
+      </button>
 
       <div className="flex items-center gap-8">
       <button
@@ -37,7 +47,7 @@ export default function Navbar() {
           hover:text-[#02B6EF]
         "
       >
-        How It Works
+        Get Started
       </button>
 
       <button
