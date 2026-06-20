@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 
 export default function Hero() {
@@ -32,7 +33,7 @@ export default function Hero() {
                 <Image
                     src="/futureyou-logo.png"
                     alt="FutureYou"
-                    width={600}
+                    width={650}
                     height={400}
                     className="relative z-10"
                 />
@@ -66,33 +67,27 @@ export default function Hero() {
             life-changing decisions.
             </p>
 
-            {/* <p
-            className="
-                mt-0
-                max-w-3xl
-                text-lg
-                md:text-1.2xl
-                text-zinc-400
-            "
-            >
-            future before making
-            life-changing decisions.
-            </p> */}
-
             <div className="mt-6 flex gap-4">
                 <button
+                    onClick={() => {
+                    document
+                        .getElementById("how-it-works")
+                        ?.scrollIntoView({
+                        behavior: "smooth",
+                        });
+                    }}
                     className="
-            rounded-2xl
-            bg-[#02B6EF]
-            px-9
-            py-3
-            font-semibold
-            text-black
-            transition
-            hover:scale-105
-          "
+                    rounded-2xl
+                    bg-[#02B6EF]
+                    px-9
+                    py-3
+                    font-semibold
+                    text-black
+                    transition
+                    hover:scale-105
+                "
                 >
-                    Create My Twin
+                    Get Started
                 </button>
 
                 <button

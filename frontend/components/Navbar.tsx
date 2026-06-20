@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 
 export default function Navbar() {
@@ -16,10 +17,28 @@ export default function Navbar() {
       <Image
         src="/futureyou-logo.png"
         alt="FutureYou"
-        width={130}
-        height={90}
+        width={150}
+        height={100}
         priority
       />
+
+      <div className="flex items-center gap-8">
+      <button
+        onClick={() => {
+          document
+            .getElementById("how-it-works")
+            ?.scrollIntoView({
+              behavior: "smooth",
+            });
+        }}
+        className="
+          text-zinc-400
+          transition
+          hover:text-[#02B6EF]
+        "
+      >
+        How It Works
+      </button>
 
       <button
         className="
@@ -38,6 +57,7 @@ export default function Navbar() {
       >
         Login
       </button>
+      </div>
     </nav>
   );
 }

@@ -1,35 +1,62 @@
+"use client";
 import { ChevronRight } from "lucide-react";
+import { useState } from "react";
 
 export default function HowItWorks() {
+  const [selected, setSelected] = useState(0);
   const steps = [
     {
       number: "01",
-      title: "Build Fin-Twin",
+      title: "Create Fin-Twin",
       description:
         "Tell us about yourself and we build your AI Financial Twin in seconds.",
+      details: [
+        "Financial Health Analysis",
+        "Emergency Fund Assessment",
+        "Risk Profile Detection",
+        "Goal Identification",
+      ],
     },
     {
       number: "02",
       title: "Simulate Decisions",
       description:
         "Run real-life scenarios and see the future impact of your decisions.",
+      details: [
+        "Home Purchase Simulation",
+        "Retirement Planning",
+        "Investment Scenarios",
+        "Goal Forecasting",
+      ],
     },
     {
       number: "03",
       title: "Recieve Next Move",
       description:
         "Our NextMove Agent analyzes your profile and recommends the best action.",
+      details: [
+        "Behavior Analysis",
+        "Opportunity Detection",
+        "Personalized Actions",
+        "Financial Prioritization",
+      ],
     },
     {
       number: "04",
       title: "Get AI Guidance",
       description:
         "Get personalized insights and explanations from your AI Copilot.",
+      details: [
+        "Natural Language Advice",
+        "Decision Explanations",
+        "Personalized Coaching",
+        "Future Planning Insights",
+      ],
     },
   ];
 
   return (
-    <section className="relative z-10 mx-auto max-w-8xl px-6">
+    <section id="how-it-works" className="relative z-10 mx-auto max-w-8xl px-6">
       <div className="mb-2 text-center">
         <h2 className="text-3xl font-bold tracking-tight">
           How Future
@@ -49,22 +76,22 @@ export default function HowItWorks() {
             className="flex items-center"
         >
             <div
-            className="
+            onClick={() => setSelected(index)}
+            className={`             
                 group
                 w-[295px]
                 h-[220px]
                 rounded-3xl
                 border
-                border-[#02B6EF]/10
-                bg-white/[0.02]
                 p-6
                 transition-all
-                duration-300
-                hover:border-[#02B6EF]/40
-                hover:bg-white/[0.04]
-                hover:-translate-y-2
-                cursor-pointer
-            "
+                duration-300                
+                ${
+                  selected === index
+                    ? "border-[#02B6EF] bg-[#02B6EF]/5 shadow-[0_0_40px_rgba(2,182,239,0.15)]"
+                    : "border-[#02B6EF]/10 bg-white/[0.02] hover:border-[#02B6EF]/40 hover:bg-white/[0.04]"
+                }
+            `}
             >
             <div className="mb-2">
                 <span
@@ -120,6 +147,65 @@ export default function HowItWorks() {
         </div>
         ))}
       </div>
-    </section>
-  );
+      {/* Detail Panel */}
+
+        <div
+            className="
+            mt-10
+            rounded-3xl
+            border
+            border-[#02B6EF]/20
+            bg-white/[0.02]
+            p-7
+            backdrop-blur-md
+            "
+        >
+            <div className="flex mt-1 items-center gap-4">
+            <div
+                className="
+                flex
+                h-16
+                w-14
+                items-center
+                justify-center
+                rounded-full
+                bg-[#02B6EF]/10
+                text-3xl
+                font-bold
+                text-[#02B6EF]
+                "
+            >
+                {steps[selected].number}
+            </div>
+
+            <h3 className="text-3xl font-bold text-white">
+                {steps[selected].title}
+            </h3>
+            </div>
+
+            <p className="mt-2 max-w-3xl text-lg text-zinc-400">
+            {steps[selected].description}
+            </p>
+
+            <div className="mt-5 grid gap-4 md:grid-cols-2">
+            {steps[selected].details.map((item) => (
+                <div
+                key={item}
+                className="
+                    rounded-2xl
+                    border
+                    border-[#02B6EF]/10
+                    bg-[#02B6EF]/5
+                    p-4
+                    text-zinc-300
+                "
+                >
+                ✓ {item}
+                </div>
+            ))}
+            </div>
+        </div>
+        </section>
+    );
 }
+    
