@@ -37,7 +37,7 @@ export default function Features() {
     <section id="Features"
         className="mx-auto max-w-7xl px-6">
       <div className="mb-6 text-center">
-        <h2 className="text-4xl font-bold">
+        <h2 className="text-4xl font-bold z-500">
           Explore Future<span className="text-[#02B6EF]">You </span>
         </h2>
 
@@ -85,7 +85,7 @@ export default function Features() {
               />
             </div>
 
-            <p className="mt-4 text-zinc-400">
+            <p className="mt-4 text-#9CA3AF">
               {feature.description}
             </p>
           </div>

@@ -33,22 +33,6 @@ export default function Navbar() {
       </button>
 
       <div className="flex items-center gap-8">
-      <button
-        onClick={() => {
-          document
-            .getElementById("how-it-works")
-            ?.scrollIntoView({
-              behavior: "smooth",
-            });
-        }}
-        className="
-          text-zinc-400
-          transition
-          hover:text-[#02B6EF]
-        "
-      >
-        Get Started
-      </button>
 
       <button
         className="

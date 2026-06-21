@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { Info, PlayCircle } from "lucide-react";
+import { Info, PlayCircle, Rocket } from "lucide-react";
 
 export default function Hero() {
     const [hideFloatingCards, setHideFloatingCards] = useState(false);
@@ -110,6 +110,36 @@ export default function Hero() {
                 gap-5
                 "
             >
+                <button
+                onClick={() =>
+                    document.getElementById("Features")?.scrollIntoView({
+                    behavior: "smooth",
+                    })
+                }
+                className="
+                    w-24
+                    h-24
+                    rounded-3xl
+                    bg-zinc-900/80
+                    backdrop-blur-xl
+                    border
+                    border-cyan-500/20
+                    flex
+                    flex-col
+                    items-center
+                    justify-center
+                    gap-2
+                    transition-all
+                    hover:border-cyan-400
+                    hover:scale-105
+                "
+                >
+                <Rocket size={24} className="text-cyan-400" />
+                <span className="text-xs text-white">
+                    Get Started
+                </span>
+                </button>
+
                 <button
                 onClick={() =>
                     document.getElementById("how-it-works")?.scrollIntoView({
