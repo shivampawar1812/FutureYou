@@ -4,14 +4,13 @@
 
 > **What if you could ask your future self before making life's biggest financial decisions?**
 
-FutureYou is an AI-powered financial copilot that builds a **Financial Digital Twin** of users and helps them understand the long-term consequences of major financial decisions before they act.
+FutureYou is an AI-powered financial intelligence platform that builds a **Financial Digital Twin** of users and helps them understand the long-term consequences of financial decisions before they act.
 
-Rather than reacting to financial events after they happen, FutureYou enables proactive decision-making through simulation, reasoning, and personalized recommendations.
+Rather than reacting to financial events after they happen, FutureYou enables proactive decision-making through simulation, forecasting, and AI-powered guidance.
 
 ---
 
-
-> ![Logo](assets/Logo.png)
+![Logo](assets/Logo.png)
 
 ---
 
@@ -25,9 +24,9 @@ People make life-changing financial decisions every day:
 * How will this loan affect my future?
 * Should I wait before making this purchase?
 
-Most people rely on spreadsheets, fragmented advice, or intuition.
+Most people rely on spreadsheets, fragmented advice, online calculators, or intuition.
 
-Traditional financial tools show what happened in the past.
+Traditional financial tools explain what happened in the past.
 
 **FutureYou helps users understand what happens next.**
 
@@ -35,9 +34,9 @@ Traditional financial tools show what happened in the past.
 
 ## Our Vision
 
-FutureYou aims to become an intelligent financial companion that helps users navigate uncertainty through simulation and AI.
+FutureYou aims to become an intelligent financial companion that helps users navigate uncertainty through simulation, prediction, and AI.
 
-By creating a living representation of a user's financial state—a **Financial Digital Twin**—the platform allows users to explore future scenarios safely before committing to important decisions.
+By creating a living representation of a user's financial state—a **Financial Digital Twin**—the platform allows users to explore future scenarios before committing to important financial decisions.
 
 > **Don't just track your finances. Understand your future.**
 
@@ -50,7 +49,7 @@ FutureYou combines:
 * Financial Modeling
 * Scenario Simulation
 * Agentic AI
-* Personalized Recommendations
+* Predictive Intelligence
 * Conversational Interfaces
 
 to answer one fundamental question:
@@ -59,17 +58,52 @@ to answer one fundamental question:
 
 ---
 
-## FutureYou v1
+# FutureYou v1
 
-### Focused User Journey
+### Financial Twin + What-If Simulator
 
-Instead of trying to solve every financial problem, FutureYou v1 focuses on one high-impact scenario:
+The first version focuses on helping users understand their current financial position and evaluate major decisions before acting.
 
-## Should I Buy This House?
+---
 
-Users can ask:
+## Financial Twin
 
-> "What if I buy a ₹50 lakh house next year?"
+Create a dynamic digital representation of a user's financial life.
+
+### Inputs
+
+* Age
+* Monthly Income
+* Monthly Expenses
+* Savings
+* Investments
+* Existing Loans
+* Monthly SIP
+* Risk Appetite
+* Financial Goals
+
+### Outputs
+
+* Financial Health Score
+* Monthly Surplus
+* Savings Rate
+* Emergency Fund Analysis
+* Risk Profile
+* Goal Readiness Metrics
+
+---
+
+## What-If Simulator
+
+Explore hypothetical decisions before making them.
+
+### Supported Scenarios
+
+* Home Purchase
+* Loan Planning
+* Investment Changes
+* Expense Adjustments
+* Goal-Based Forecasting
 
 FutureYou evaluates:
 
@@ -77,134 +111,252 @@ FutureYou evaluates:
 * Debt-to-income ratio
 * Emergency fund adequacy
 * Retirement impact
-* Future net-worth trajectory
+* Future affordability
 * Financial resilience
 
-and provides actionable guidance.
+and provides actionable recommendations.
 
 ---
 
-## Features
-
-### Financial Digital Twin
-
-Create a dynamic representation of a user's financial life.
-
-Inputs:
-
-* Age
-* Monthly income
-* Monthly expenses
-* Savings
-* Investments
-* Existing loans
-* Monthly SIP
-* Risk appetite
-
-Outputs:
-
-* Monthly surplus
-* Financial health indicators
-* Risk profile
-* Future projections
-
----
-
-### What-If Simulator
-
-Explore hypothetical decisions before making them.
-
-Examples:
-
-* Buying a house
-* Taking a loan
-* Increasing investments
-* Changing expenses
-* Delaying major purchases
-
----
-
-### AI Copilot
-
-Interact naturally with FutureYou:
-
-> "Can I afford this house?"
-
-> "Should I increase my down payment?"
-
-> "What happens if my salary grows by 8% annually?"
-
-FutureYou explains outcomes in simple, human language.
-
----
-
-### Recommendation Engine
-
-FutureYou doesn't stop at analysis.
-
-It recommends actions such as:
-
-* Proceed confidently.
-* Wait and save longer.
-* Increase emergency reserves.
-* Reduce debt exposure.
-* Improve affordability through alternative plans.
-
----
-
-## System Architecture
+## Current User Journey
 
 ```text
-                User
-                  │
-                  ▼
-        Financial Profile
-                  │
-                  ▼
-       Financial Digital Twin
-                  │
-                  ▼
-          Simulation Engine
-                  │
-                  ▼
-         Agentic Reasoning Layer
-                  │
-                  ▼
-      Recommendation Generator
-                  │
-                  ▼
-            AI Copilot
+Create Financial Twin
+          │
+          ▼
+View Financial Health
+          │
+          ▼
+Run What-If Simulation
+          │
+          ▼
+Receive Personalized Recommendation
 ```
 
 ---
 
-## Tech Stack
+# FutureYou v2
 
-### Frontend
+### Timeline Agent + Life Event Agent
+
+FutureYou evolves from analysis into prediction.
+
+---
+
+## Timeline Agent
+
+Visualizes a user's future financial journey.
+
+### Example Timeline
+
+```text
+2026
+Emergency Fund Completed
+
+2028
+Home Purchase Ready
+
+2032
+₹50L Wealth Milestone
+
+2045
+Retirement Ready
+```
+
+### Capabilities
+
+* Future Wealth Forecasting
+* Goal Achievement Tracking
+* Retirement Readiness Projection
+* Financial Milestone Visualization
+
+---
+
+## Life Event Agent
+
+Proactively prepares users for major life events.
+
+### Supported Events
+
+* Home Purchase
+* Marriage Planning
+* Child Education
+* Retirement Planning
+* Major Lifestyle Changes
+
+Instead of reacting to life events, FutureYou helps users prepare years in advance.
+
+---
+
+# FutureYou v3
+
+### SBI Product Matching + Financial Knowledge RAG
+
+FutureYou becomes an intelligent financial advisor powered by Retrieval-Augmented Generation.
+
+---
+
+## SBI Product Matching Agent
+
+Maps user goals to relevant financial products.
+
+### Examples
+
+```text
+Goal: Emergency Fund
+↓
+SBI Fixed Deposit
+
+Goal: Retirement Planning
+↓
+SBI Mutual Funds
+
+Goal: Home Purchase
+↓
+SBI Home Loan
+```
+
+---
+
+## Financial Knowledge RAG Agent
+
+A knowledge retrieval system built on:
+
+* SBI Product Documentation
+* Financial Education Resources
+* Tax Rules
+* Government Schemes
+* Investment Knowledge
+* Insurance Information
+
+Users can ask:
+
+> Should I choose an FD or SIP?
+
+> How much emergency fund should I maintain?
+
+> Which financial product suits my goal?
+
+and receive grounded, context-aware responses.
+
+---
+
+# FutureYou v4
+
+### Autonomous Financial Intelligence Platform
+
+FutureYou evolves into a proactive AI financial ecosystem.
+
+---
+
+## Planned Agents
+
+### Goal Navigator Agent
+
+Tracks progress toward financial goals and identifies gaps.
+
+### Risk Radar Agent
+
+Monitors:
+
+* Emergency Funds
+* Debt Levels
+* Savings Health
+* Financial Stability
+
+and proactively alerts users.
+
+### Financial Coach Agent
+
+Provides continuous personalized coaching and engagement.
+
+### News Impact Agent
+
+Analyzes economic events and explains their impact on the user's financial future.
+
+### Multi-Agent Orchestration
+
+FutureYou coordinates multiple specialized agents:
+
+```text
+Financial Twin Agent
+What-If Agent
+Timeline Agent
+Life Event Agent
+Risk Agent
+Coach Agent
+Knowledge Agent
+```
+
+through a central orchestration layer.
+
+---
+
+# System Architecture
+
+```text
+                 User
+                   │
+                   ▼
+         Financial Profile
+                   │
+                   ▼
+        Financial Digital Twin
+                   │
+                   ▼
+         What-If Simulator
+                   │
+                   ▼
+          Agentic AI Layer
+                   │
+      ┌────────────┼────────────┐
+      ▼            ▼            ▼
+ Timeline     Life Event      RAG
+  Agent         Agent        Agent
+      │            │            │
+      └────────────┼────────────┘
+                   ▼
+         Recommendation Engine
+                   │
+                   ▼
+            FutureYou Copilot
+```
+
+---
+
+# Tech Stack
+
+## Frontend
 
 * Next.js
 * TypeScript
 * Tailwind CSS
 * Framer Motion
 
-### Backend
+## Backend
 
 * FastAPI
 * Python
 * Pydantic
 
-### AI Layer
+## AI Layer
 
 * LangGraph
 * LangChain
-* OpenAI-compatible LLMs
+* Groq Llama Models
 
-### Data & Persistence
+## RAG Infrastructure
+
+* ChromaDB
+* BGE Embeddings
+* Sentence Transformers
+
+## Data & Persistence
 
 * PostgreSQL
-* Redis (future)
+* Redis (Future)
 
-### Deployment
+## Deployment
 
 * Vercel
 * Docker
@@ -212,73 +364,30 @@ It recommends actions such as:
 
 ---
 
-## Repository Status
+# Repository Status
 
-🚧 **Early Development**
+🚧 Active Development
 
-FutureYou is currently in its foundational stage.
+Current Progress:
 
-The focus right now is to establish the core intelligence layer by building:
-
-* The Financial Digital Twin
-* The simulation engine
-* Affordability and projection models
-* Agentic reasoning workflows
-* A seamless conversational experience
-
----
-
-## Roadmap
-
-### Phase 1 — Foundation
-
-* [ ] Define financial profile schema
-* [ ] Build Financial Digital Twin
-* [ ] Develop projection models
-* [ ] Implement affordability metrics
-
-### Phase 2 — Simulation Engine
-
-* [ ] EMI calculator
-* [ ] Debt-to-income analysis
-* [ ] Emergency fund analysis
-* [ ] Net-worth forecasting
-* [ ] Scenario comparison engine
-
-### Phase 3 — Agentic Intelligence
-
-* [ ] Simulation Agent
-* [ ] Recommendation Agent
-* [ ] Copilot Agent
-* [ ] Multi-agent orchestration
-
-### Phase 4 — User Experience
-
-* [ ] Dashboard
-* [ ] Scenario Simulator
-* [ ] AI Copilot Chat
-* [ ] Financial Timeline
-* [ ] Interactive visualizations
-
-### Phase 5 — Platform Maturity
-
-* [ ] Authentication
-* [ ] Persistent user profiles
-* [ ] Expanded financial scenarios
-* [ ] Performance optimization
-* [ ] End-to-end deployment
+* Financial Twin Engine ✅
+* Affordability Analysis ✅
+* Home Purchase Simulation ✅
+* Recommendation Engine ✅
+* Dashboard UI 🚧
+* Timeline Agent ⏳
+* Life Event Agent ⏳
+* RAG Agent ⏳
 
 ---
 
-## Why FutureYou?
+# Why FutureYou?
 
-FutureYou is built on a simple belief:
+Financial decisions shape our future, yet most people make them without understanding their long-term consequences.
 
-> Financial decisions shape our future, but most people make them without understanding their consequences.
+FutureYou combines simulation, prediction, and AI to help users make smarter financial decisions with confidence.
 
-We want to change that.
-
-By combining AI with financial simulation, FutureYou helps people move from uncertainty to confidence.
+> **Don't ask what your finances look like today. Ask what they will look like tomorrow.**
 
 ---
 
@@ -286,22 +395,14 @@ By combining AI with financial simulation, FutureYou helps people move from unce
 
 FutureYou is intended for educational and decision-support purposes only and does not constitute financial advice. Users should consult qualified professionals before making major financial decisions.
 
-
 ---
 
 ## Built for Better Decisions
 
 **FutureYou — Banking that thinks ahead.**
 
-
 ---
 
-## Created by
+## Created By
 
 ### Shivam Pawar
-
-AI Engineer passionate about building intelligent systems that help people make better decisions under uncertainty.
-
-
-
-
