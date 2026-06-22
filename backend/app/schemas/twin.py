@@ -12,10 +12,8 @@ class FinancialTwin(BaseModel):
 
     retirement_years_remaining: int
 
-    affordability_score: float 
+    general_affordability_score: float 
 
     financial_health_score: float
 
     risk_profile: str
-
-    general_home_purchase_readiness: float

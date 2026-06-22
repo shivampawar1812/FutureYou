@@ -34,7 +34,7 @@ export default function Features() {
   ];
 
   return (
-    <section id="Features"
+    <section 
         className="mx-auto max-w-7xl px-6">
       <div className="mb-6 text-center">
         <h2 className="text-4xl font-bold z-500">

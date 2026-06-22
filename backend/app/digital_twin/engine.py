@@ -55,7 +55,6 @@ def calculate_affordability_score(
     dti: float,
     emergency_fund_months: float,
     savings_rate: float,
-    dependents: int,
     employment_type: str
 ) -> float:
 
@@ -69,9 +68,6 @@ def calculate_affordability_score(
 
     if savings_rate < 0.20:
         score -= 20
-
-    if dependents >= 2:
-        score -= 10
 
     if employment_type == "Self-Employed":
         score -= 10
@@ -101,26 +97,6 @@ def calculate_financial_health_score(
 
 
 
-def calculate_general_home_purchase_readiness(
-    affordability_score: float,
-    financial_health_score: float,
-    emergency_fund_months: float
-) -> float:
-
-    emergency_score = min(
-        emergency_fund_months / 6,
-        1.0
-    ) * 100
-
-    readiness = (
-        affordability_score * 0.5
-        + financial_health_score * 0.3
-        + emergency_score * 0.2
-    )
-
-    return round(readiness, 2)
-
-
 def generate_financial_twin(
     profile: FinancialProfile
 ) -> FinancialTwin:
@@ -140,26 +116,21 @@ def generate_financial_twin(
         profile.monthly_income
     )
 
-    emergency_fund_months = (
-        calculate_emergency_fund_months(
+    emergency_fund_months = calculate_emergency_fund_months(
             profile.savings,
             profile.monthly_expenses
         )
-    )
 
-    retirement_years_remaining = (
-        calculate_retirement_years_remaining(
+    retirement_years_remaining = calculate_retirement_years_remaining(
             profile.age,
             profile.retirement_age
         )
-    )
 
     affordability_score = (
         calculate_affordability_score(
             dti,
             emergency_fund_months,
             savings_rate,
-            profile.dependents,
             profile.employment_type
         )
     )
@@ -172,29 +143,13 @@ def generate_financial_twin(
         )
     )
         
-    general_home_purchase_readiness = (
-        calculate_general_home_purchase_readiness(
-            affordability_score,
-            financial_health_score,
-            emergency_fund_months
-        )
-    )
-
     return FinancialTwin(
         monthly_surplus=monthly_surplus,
         savings_rate=round(savings_rate, 2),
         debt_to_income_ratio=round(dti, 2),
-        emergency_fund_months=round(
-            emergency_fund_months,
-            2
-        ),
-        retirement_years_remaining=
-            retirement_years_remaining,
-        affordability_score=
-            affordability_score,
-        financial_health_score=
-            financial_health_score,
+        emergency_fund_months=round(emergency_fund_months, 2),
+        retirement_years_remaining=retirement_years_remaining,
+        general_affordability_score=affordability_score,
+        financial_health_score=financial_health_score,
         risk_profile=profile.risk_appetite,
-        general_home_purchase_readiness=
-            general_home_purchase_readiness
     )

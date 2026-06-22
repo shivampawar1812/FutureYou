@@ -2,10 +2,7 @@ from math import pow
 from app.schemas.profile import FinancialProfile
 from app.schemas.home_purchase import HomePurchaseScenario
 from app.schemas.simulation import HomePurchaseResult
-
-from app.digital_twin.engine import (
-    calculate_affordability_score
-)
+from app.digital_twin.engine import calculate_affordability_score
 
 
 def calculate_emi(
@@ -89,10 +86,8 @@ def simulate_home_purchase(
     affordability_score_after_purchase = (
         calculate_affordability_score(
             dti=debt_to_income_after_purchase,
-            emergency_fund_months=
-                emergency_fund_months_after_purchase,
+            emergency_fund_months=emergency_fund_months_after_purchase,
             savings_rate=savings_rate_after_purchase,
-            dependents=profile.dependents,
             employment_type=profile.employment_type
         )
     )
@@ -124,41 +119,22 @@ def simulate_home_purchase(
 
     
     return HomePurchaseResult(
-        loan_amount=round(
-            loan_amount,
-            2
-        ),
+        loan_amount=round(loan_amount,2),
 
-        monthly_emi=round(
-            monthly_emi,
-            2
-        ),
+        monthly_emi=round(monthly_emi,2),
         
-        monthly_surplus_after_purchase=round(
-            monthly_surplus_after_purchase,
-            2
-        ),
+        monthly_surplus_after_purchase=round(monthly_surplus_after_purchase,2),
 
 
-        debt_to_income_after_purchase=round(
-            debt_to_income_after_purchase,
-            2
-        ),
+        debt_to_income_after_purchase=round(debt_to_income_after_purchase,2),
 
-        emergency_fund_after_down_payment=round(
-            remaining_savings,
-            2
-        ),
+        emergency_fund_after_down_payment=round(remaining_savings,2),
 
-        emergency_fund_months_after_purchase=round(
-            emergency_fund_months_after_purchase,
-            2
-        ),
+        emergency_fund_months_after_purchase=round(emergency_fund_months_after_purchase, 2),
 
-        affordability_score_after_purchase=round(
-            affordability_score_after_purchase,
-            2
-        ),
+        affordability_score_after_purchase=round(affordability_score_after_purchase, 2),
+
+        general_affordability_score_after_purchase=round(affordability_score_after_purchase, 2),
 
         recommendation=recommendation
     )

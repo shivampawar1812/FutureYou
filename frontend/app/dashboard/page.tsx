@@ -80,7 +80,7 @@ return (
 
     <Navbar />
 
-    <div className=" mx-auto max-w-7xl px-6 pt-20 pb-10">
+    <div className=" mx-auto max-w-7xl px-6 pt-18 pb-10">
       <div className="flex justify-center">
         <h1
         className="
@@ -141,7 +141,7 @@ return (
         <h2
           className="
             mt-2
-            text-7xl
+            text-6xl
             font-bold
             text-[#02B6EF]
           "
@@ -179,6 +179,24 @@ return (
                 {" "}Months
               </span>
             </div>
+            <div className="flex justify-between">
+              <span className="text-zinc-400">
+                Debt to Income Ratio
+              </span>
+
+              <span className="font-semibold">
+                {twin.debt_to_income_ratio}
+              </span>
+            </div>
+            {/* <div className="flex justify-between">
+              <span className="text-zinc-400">
+                General Affordability Score
+              </span>
+
+              <span className="font-semibold">
+                {twin.general_affordability_score}
+              </span>
+            </div> */}
             <div className="flex justify-between">
               <span className="text-zinc-400">
                 Risk Profile

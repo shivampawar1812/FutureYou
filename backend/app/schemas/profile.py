@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import Literal, Optional
+from typing import Literal
 
 class FinancialProfile(BaseModel):
     # Personal Details
@@ -16,7 +16,6 @@ class FinancialProfile(BaseModel):
 
     # Assets
     savings: float
-    investments: float = 0.0
 
     # Liabilities
     existing_loan_outstanding: float = 0.0
@@ -37,17 +36,3 @@ class FinancialProfile(BaseModel):
         "Business"
     ]
 
-    dependents: int = 0
-
-    owns_home: bool = False
-
-    primary_goal: Literal[
-        "Home Purchase",
-        "Retirement",
-        "Education",
-        "Wealth Creation",
-        "Emergency Fund",
-        "Other"
-    ] = "Home Purchase"
-
-    goal_years: Optional[int] = None

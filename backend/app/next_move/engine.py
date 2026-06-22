@@ -66,28 +66,8 @@ def generate_next_move(
 
             priority="Medium",
 
-            impact_score=75
+            impact_score=70
         )
-    
-    profile.primary_goal == "Home Purchase"
-    twin.home_purchase_readiness < 80
-    return NextMove(
-        title="Improve Home Readiness",
-
-        reason=(
-            "Current financial readiness is "
-            "below the target level."
-        ),
-
-        action=(
-            "Increase savings and improve "
-            "affordability before purchasing."
-        ),
-
-        priority="High",
-
-        impact_score=85
-    )
 
     return NextMove(
         title="Maintain Momentum",

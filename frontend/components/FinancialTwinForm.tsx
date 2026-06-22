@@ -9,11 +9,11 @@ export default function FinancialTwinForm() {
     monthly_income: "",
     monthly_expenses: "",
     savings: "",
+    existing_loan_outstanding: "",
+    monthly_emi: "",
     monthly_sip: "",
-    dependents: "",
     risk_appetite: "Moderate",
     employment_type: "Salaried",
-    primary_goal: "Wealth Creation",
   });
 
   const router = useRouter();
@@ -53,12 +53,16 @@ export default function FinancialTwinForm() {
         formData.savings
       ),
 
-      monthly_sip: Number(
-        formData.monthly_sip
+      existing_loan_outstanding: Number(
+        formData.existing_loan_outstanding
       ),
 
-      dependents: Number(
-        formData.dependents
+      monthly_emi: Number(
+        formData.monthly_emi
+      ),
+
+      monthly_sip: Number(
+        formData.monthly_sip
       ),
 
       risk_appetite:
@@ -66,9 +70,6 @@ export default function FinancialTwinForm() {
 
       employment_type:
         formData.employment_type,
-
-      primary_goal:
-        formData.primary_goal,
     };
 
     const twin =
@@ -143,14 +144,13 @@ export default function FinancialTwinForm() {
           </div>
 
           <div>
-            <label className="mb-1 block text-zinc-100">
-              Dependents
+            <label className="mb-2 block text-zinc-100">
+              Risk Appetite
             </label>
 
-            <input
-              type="number"
-              name="dependents"
-              value={formData.dependents}
+            <select
+              name="risk_appetite"
+              value={formData.risk_appetite}
               onChange={handleChange}
               className="
                 w-full
@@ -160,10 +160,12 @@ export default function FinancialTwinForm() {
                 bg-black
                 px-4
                 py-3
-                outline-none
-                focus:border-[#02B6EF]
               "
-            />
+            >
+              <option>Low</option>
+              <option>Moderate</option>
+              <option>High</option>
+            </select>
           </div>
 
           <div>
@@ -287,6 +289,54 @@ export default function FinancialTwinForm() {
 
           <div>
             <label className="mb-2 block text-zinc-100">
+              Existing Loan Outstanding
+            </label>
+
+            <input
+              type="number"
+              name="existing_loan_outstanding"
+              value={formData.existing_loan_outstanding}
+              onChange={handleChange}
+              className="
+                w-full
+                rounded-xl
+                border
+                border-[#02B6EF]/40
+                bg-black
+                px-4
+                py-3
+                outline-none
+                focus:border-[#02B6EF]/80
+              "
+            />
+          </div>
+
+          <div>
+            <label className="mb-2 block text-zinc-100">
+              Monthly EMI
+            </label>
+
+            <input
+              type="number"
+              name="monthly_emi"
+              value={formData.monthly_emi}
+              onChange={handleChange}
+              className="
+                w-full
+                rounded-xl
+                border
+                border-[#02B6EF]/40
+                bg-black
+                px-4
+                py-3
+                outline-none
+                focus:border-[#02B6EF]/80
+              "
+            />
+          </div>
+
+          <div>
+            <label className="mb-2 block text-zinc-100">
               Monthly SIP
             </label>
 
@@ -307,57 +357,6 @@ export default function FinancialTwinForm() {
                 focus:border-[#02B6EF]
               "
             />
-          </div>
-
-          <div>
-            <label className="mb-2 block text-zinc-100">
-              Risk Appetite
-            </label>
-
-            <select
-              name="risk_appetite"
-              value={formData.risk_appetite}
-              onChange={handleChange}
-              className="
-                w-full
-                rounded-xl
-                border
-                border-[#02B6EF]/40
-                bg-black
-                px-4
-                py-3
-              "
-            >
-              <option>Low</option>
-              <option>Moderate</option>
-              <option>High</option>
-            </select>
-          </div>
-
-          <div>
-            <label className="mb-2 block text-zinc-100">
-              Primary Goal
-            </label>
-
-            <select
-              name="primary_goal"
-              value={formData.primary_goal}
-              onChange={handleChange}
-              className="
-                w-full
-                rounded-xl
-                border
-                border-[#02B6EF]/40
-                bg-black
-                px-4
-                py-3
-              "
-            >
-              <option>Home Purchase</option>
-              <option>Wealth Creation</option>
-              <option>Retirement</option>
-              <option>Emergency Planning</option>
-            </select>
           </div>
         </div>
       </div>

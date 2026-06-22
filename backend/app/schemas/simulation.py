@@ -15,6 +15,6 @@ class HomePurchaseResult(BaseModel):
 
     monthly_surplus_after_purchase: float
 
-    affordability_score_after_purchase: float
+    general_affordability_score_after_purchase: float
 
     recommendation: str

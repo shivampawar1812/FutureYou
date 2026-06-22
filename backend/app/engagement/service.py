@@ -1,8 +1,6 @@
 from app.llm.groq_service import GroqService
 
-from app.next_move.schemas import (
-    NextMove
-)
+from app.next_move.schemas import (NextMove)
 
 class EngagementService:
 

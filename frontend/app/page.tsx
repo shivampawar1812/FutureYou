@@ -15,7 +15,7 @@ export default function Home() {
 
       <Hero />
 
-      <div className="relative mx-auto max-w-8xl px-6 py-8">
+      <div id="Features" className="relative mx-auto max-w-8xl px-6 py-8">
       <div className="h-px w-full bg-gradient-to-r from-transparent via-[#00559a]/60 to-transparent" />
       </div>
 
