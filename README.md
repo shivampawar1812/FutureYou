@@ -10,7 +10,10 @@ Rather than reacting to financial events after they happen, FutureYou enables pr
 
 ---
 
-![Logo](assets/Logo.png)
+![Logo](assets/Landing.png)
+
+
+![Logo](assets/FinancialTwin.png)
 
 ---
 
