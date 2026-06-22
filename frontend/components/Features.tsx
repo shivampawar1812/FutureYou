@@ -10,7 +10,7 @@ export default function Features() {
     {
       title: "Financial Twin",
       description:
-        "Build a digital twin of your finances.",
+        "Analyze your current financial health,risk profile and next best action..",
       route: "/twin",
     },
     {
@@ -20,16 +20,16 @@ export default function Features() {
       route: "/simulator",
     },
     {
-      title: "NextMove Agent",
+      title: "Timeline Agent",
       description:
-        "Get proactive financial recommendations.",
-      route: "/next-move",
+        "Coming Soon !! Visualize your financial future as an evolving timeline.",
+      route: "/timeline",
     },
     {
-      title: "AI Copilot",
+      title: "Life Event Agent",
       description:
-        "Receive personalized financial guidance.",
-      route: "/copilot",
+        "Coming Soon !! AI proactively predicts upcoming financial milestones.",
+      route: "/life-event",
     },
   ];
 
@@ -59,12 +59,12 @@ export default function Features() {
               cursor-pointer
               rounded-3xl
               border
-              border-[#02B6EF]/10
+              border-[#02B6EF]/30
               bg-white/[0.02]
-              p-8
+              p-6
               transition-all
               duration-300
-              hover:border-[#02B6EF]/40
+              hover:border-[#02B6EF]/100
               hover:bg-white/[0.04]
               hover:-translate-y-2
             "

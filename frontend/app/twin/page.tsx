@@ -11,7 +11,7 @@ export default function TwinPage() {
 
       <Navbar />
 
-      <div className="mx-auto max-w-7xl px-28 mt-26">
+      <div className="mx-auto max-w-7xl px-28 mt-16">
 
         <div className="mb-1 mt-10">
         <div className="flex justify-center">
@@ -21,7 +21,6 @@ export default function TwinPage() {
                     absolute
                     inset-0
                     rounded-full
-                    bg-[#00559a]/30
                     blur-[500px]
                     items-left
                     "
@@ -31,7 +30,7 @@ export default function TwinPage() {
           </h1>
         </div>
         <div className="flex justify-center">
-          <p className="mt-4 text-zinc-400">
+          <p className="mt-4 mb-8 text-zinc-400">
             Tell us about your finances and
             FutureYou will build a digital twin
             of your financial future.
@@ -40,23 +39,9 @@ export default function TwinPage() {
         </div>
       </div>
 
-
-      <div className="relative mx-auto max-w-10xl px-6 py-6">
-      <div className="h-px w-full bg-gradient-to-r from-transparent via-[#02B6EF]/60 to-transparent" />
-      </div>
-
-
       <FinancialTwinForm/>
 
-      <div className="relative mx-auto max-w-10xl px-6 mt-6">
-      <div className="h-px w-full bg-gradient-to-r from-transparent via-[#02B6EF]/20 to-transparent" />
-      </div>
-
-    <div className="flex justify-center mb-">
-      <img src="/fintwinimage.png" alt="FinTwin" height={80} width={400} />
-    </div>
-
-    <div className="relative mx-auto max-w-10xl px-6 py-3">
+      <div className="relative mx-auto max-w-10xl px-6 pt-3">
       <div className="h-px w-full bg-gradient-to-r from-transparent via-[#02B6EF]/60 to-transparent" />
       </div>
 

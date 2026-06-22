@@ -19,18 +19,6 @@ export default function HowItWorks() {
     },
     {
       number: "02",
-      title: "Simulate Decisions",
-      description:
-        "Run real-life scenarios and see the future impact of your decisions.",
-      details: [
-        "Home Purchase Simulation",
-        "Retirement Planning",
-        "Investment Scenarios",
-        "Goal Forecasting",
-      ],
-    },
-    {
-      number: "03",
       title: "Get Next Move",
       description:
         "Our NextMove Agent analyzes your profile and recommends the best action.",
@@ -39,6 +27,18 @@ export default function HowItWorks() {
         "Opportunity Detection",
         "Personalized Actions",
         "Financial Prioritization",
+      ],
+    },
+    {
+      number: "03",
+      title: "Simulate Decisions",
+      description:
+        "Run real-life scenarios and see the future impact of your decisions.",
+      details: [
+        "Home Purchase Simulation",
+        "Retirement Planning",
+        "Investment Scenarios",
+        "Goal Forecasting",
       ],
     },
     {
@@ -88,8 +88,8 @@ export default function HowItWorks() {
                 duration-300                
                 ${
                   selected === index
-                    ? "border-[#02B6EF] bg-[#02B6EF]/5 shadow-[0_0_40px_rgba(2,182,239,0.15)]"
-                    : "border-[#02B6EF]/10 bg-white/[0.02] hover:border-[#02B6EF]/40 hover:bg-white/[0.04]"
+                    ? "border-[#02B6EF]/200 bg-[#02B6EF]/5 shadow-[0_0_40px_rgba(2,182,239,0.15)]"
+                    : "border-[#02B6EF]/30 bg-white/[0.02] hover:border-[#02B6EF]/80 hover:bg-white/[0.04]"
                 }
             `}
             >
@@ -135,7 +135,7 @@ export default function HowItWorks() {
                 rounded-full
                 border
                 border-[#02B6EF]/30
-                bg-[#02B6EF]/5
+                bg-[#00559a]/5
                 "
             >
                 <ChevronRight
@@ -195,7 +195,7 @@ export default function HowItWorks() {
                     rounded-2xl
                     border
                     border-[#02B6EF]/10
-                    bg-[#02B6EF]/5
+                    bg-[#00559a]/10
                     p-4
                     text-zinc-300
                 "

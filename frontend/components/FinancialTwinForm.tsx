@@ -1,6 +1,7 @@
 "use client";
-
+import { generateTwin } from "@/services/twin";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function FinancialTwinForm() {
   const [formData, setFormData] = useState({
@@ -15,6 +16,8 @@ export default function FinancialTwinForm() {
     primary_goal: "Wealth Creation",
   });
 
+  const router = useRouter();
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
@@ -24,16 +27,71 @@ export default function FinancialTwinForm() {
     });
   };
 
-  const handleSubmit = (
-    e: React.FormEvent<HTMLFormElement>
-  ) => {
-    e.preventDefault();
+  const [loading, setLoading] =
+  useState(false);
 
-    console.log(formData);
+  const handleSubmit = async (
+  e: React.FormEvent
+) => {
+  e.preventDefault();
 
-    // TODO:
-    // Send data to backend
-  };
+  try {
+    setLoading(true);
+
+    const payload = {
+      age: Number(formData.age),
+
+      monthly_income: Number(
+        formData.monthly_income
+      ),
+
+      monthly_expenses: Number(
+        formData.monthly_expenses
+      ),
+
+      savings: Number(
+        formData.savings
+      ),
+
+      monthly_sip: Number(
+        formData.monthly_sip
+      ),
+
+      dependents: Number(
+        formData.dependents
+      ),
+
+      risk_appetite:
+        formData.risk_appetite,
+
+      employment_type:
+        formData.employment_type,
+
+      primary_goal:
+        formData.primary_goal,
+    };
+
+    const twin =
+      await generateTwin(payload);
+
+    localStorage.setItem(
+      "financialTwin",
+      JSON.stringify(twin)
+    );
+
+    localStorage.setItem(
+      "financialProfile",
+      JSON.stringify(payload)
+    );
+
+    router.push("/dashboard");
+
+  } catch (error) {
+    console.error(error);
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <form
@@ -45,9 +103,12 @@ export default function FinancialTwinForm() {
         className="
           rounded-3xl
           border
-          border-[#00559a]/30
-          bg-white/[0.02]
-          p-8
+          border-[#02B6EF]/30
+          bg-white/[0.01]
+          pl-10
+          pr-10
+          pt-4
+          pb-6
           max-w-7xl
           mx-auto
         "
@@ -56,7 +117,7 @@ export default function FinancialTwinForm() {
           Personal Details
         </h2>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-3">
           <div>
             <label className="mb-1 block text-zinc-100">
               Age
@@ -71,7 +132,7 @@ export default function FinancialTwinForm() {
                 w-full
                 rounded-xl
                 border
-                border-zinc-800
+                border-[#02B6EF]/40
                 bg-black
                 px-4
                 py-3
@@ -95,7 +156,7 @@ export default function FinancialTwinForm() {
                 w-full
                 rounded-xl
                 border
-                border-zinc-800
+                border-[#02B6EF]/40
                 bg-black
                 px-4
                 py-3
@@ -118,7 +179,7 @@ export default function FinancialTwinForm() {
                 w-full
                 rounded-xl
                 border
-                border-zinc-800
+                border-[#02B6EF]/40
                 bg-black
                 px-4
                 py-3
@@ -137,9 +198,12 @@ export default function FinancialTwinForm() {
         className="
           rounded-3xl
           border
-          border-[#02B6EF]/10
-          bg-white/[0.02]
-          p-8
+          border-[#02B6EF]/30
+          bg-white/[0.01]
+          pl-10
+          pr-10
+          pt-4
+          pb-6
           max-w-7xl
           mx-auto
         "
@@ -163,7 +227,7 @@ export default function FinancialTwinForm() {
                 w-full
                 rounded-xl
                 border
-                border-zinc-800
+                border-[#02B6EF]/40
                 bg-black
                 px-4
                 py-3
@@ -187,7 +251,7 @@ export default function FinancialTwinForm() {
                 w-full
                 rounded-xl
                 border
-                border-zinc-800
+                border-[#02B6EF]/40
                 bg-black
                 px-4
                 py-3
@@ -211,12 +275,12 @@ export default function FinancialTwinForm() {
                 w-full
                 rounded-xl
                 border
-                border-zinc-800
+                border-[#02B6EF]/40
                 bg-black
                 px-4
                 py-3
                 outline-none
-                focus:border-[#02B6EF]
+                focus:border-[#02B6EF]/80
               "
             />
           </div>
@@ -235,7 +299,7 @@ export default function FinancialTwinForm() {
                 w-full
                 rounded-xl
                 border
-                border-zinc-800
+                border-[#02B6EF]/40
                 bg-black
                 px-4
                 py-3
@@ -258,7 +322,7 @@ export default function FinancialTwinForm() {
                 w-full
                 rounded-xl
                 border
-                border-zinc-800
+                border-[#02B6EF]/40
                 bg-black
                 px-4
                 py-3
@@ -283,7 +347,7 @@ export default function FinancialTwinForm() {
                 w-full
                 rounded-xl
                 border
-                border-zinc-800
+                border-[#02B6EF]/40
                 bg-black
                 px-4
                 py-3
@@ -301,19 +365,20 @@ export default function FinancialTwinForm() {
       {/* Submit Button */}
       <div className="flex justify-center">
         <button
-          type="submit"
-          className="
+        type="submit"
+        disabled={loading}
+        className="
             rounded-2xl
             bg-[#02B6EF]
             px-10
-            py-4
+            py-3
             font-semibold
             text-black
-            transition
-            hover:scale-105
-          "
+        "
         >
-          Generate Financial Twin
+        {loading
+            ? "Generating..."
+            : "Generate Financial Twin"}
         </button>
       </div>
     </form>

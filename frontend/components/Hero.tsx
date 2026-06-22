@@ -53,8 +53,8 @@ export default function Hero() {
                     absolute
                     inset-0
                     rounded-full
-                    bg-[#00559a]/150
-                    blur-[220px]
+                    bg-[#00559a]/500
+                    blur-[180px]
                     items-left
                     "
                 />
@@ -77,6 +77,7 @@ export default function Hero() {
                 md:text-2xl
                 font-extrabold
                 tracking-tight
+                z-800
             "
             >
                 A Digital Twin for Your Financial Future
