@@ -19,38 +19,38 @@ export default function HowItWorks() {
     },
     {
       number: "02",
-      title: "Get Next Move",
+      title: "What-If Simulator",
       description:
-        "Our NextMove Agent analyzes your profile and recommends the best action.",
+        "Test major financial decisions before making them and understand the long-term impact.",
       details: [
-        "Behavior Analysis",
-        "Opportunity Detection",
-        "Personalized Actions",
-        "Financial Prioritization",
+        "Home Purchase Simulation",
+        "Loan Affordability Analysis",
+        "Investment Scenarios",
+        "Goal Impact Forecasting",
       ],
     },
     {
       number: "03",
-      title: "Simulate Decisions",
+      title: "Timeline Agent",
       description:
-        "Run real-life scenarios and see the future impact of your decisions.",
+        "Visualize your financial journey and future milestones through an AI-generated roadmap.",
       details: [
-        "Home Purchase Simulation",
-        "Retirement Planning",
-        "Investment Scenarios",
-        "Goal Forecasting",
+        "Future Wealth Projections",
+        "Goal Achievement Timeline",
+        "Retirement Readiness Tracking",
+        "Financial Milestone Mapping",
       ],
     },
     {
       number: "04",
-      title: "Get AI Guidance",
+      title: "Life Event Agent",
       description:
-        "Get personalized insights and explanations from your AI Copilot.",
+        "Receive proactive guidance for upcoming life events before they become financial challenges.",
       details: [
-        "Natural Language Advice",
-        "Decision Explanations",
-        "Personalized Coaching",
-        "Future Planning Insights",
+        "Home Purchase Planning",
+        "Marriage Readiness Insights",
+        "Child Education Forecasting",
+        "Retirement Preparation Alerts",
       ],
     },
   ];
@@ -96,7 +96,7 @@ export default function HowItWorks() {
             <div className="mb-3">
                 <span
                 className="
-                    text-4xl
+                    text-3xl
                     font-bold
                     text-[#02B6EF]
                 "

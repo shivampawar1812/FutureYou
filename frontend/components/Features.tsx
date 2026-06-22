@@ -10,7 +10,7 @@ export default function Features() {
     {
       title: "Financial Twin",
       description:
-        "Analyze your current financial health,risk profile and next best action..",
+        "Analyze your current financial health, risk profile and next best action with AI....",
       route: "/twin",
     },
     {
